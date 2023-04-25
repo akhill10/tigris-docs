@@ -216,7 +216,7 @@ const request: SearchQuery<Review> = {
   },
   filter: {
     score: {
-      "$gt": 4,
+      $gt: 4,
     },
   },
   hitsPerPage: 5,
@@ -253,13 +253,13 @@ const request: SearchQuery<Review> = {
     vector: embeddings,
   },
   filter: {
-    "$and": [
+    $and: [
       {
         ProductId: "B006F2NYI2",
       },
       {
         Score: {
-          "$gt": 4,
+          $gt: 4,
         },
       },
     ],

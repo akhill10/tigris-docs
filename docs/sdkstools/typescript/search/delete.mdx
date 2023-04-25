@@ -84,15 +84,15 @@ const deleteCount = await catalog.deleteByQuery({ brand: "coach" });
 
 ```ts
 const deleteCount = await catalog.deleteByQuery({
-  "$and": [
+  $and: [
     {
       price: {
-        "$gte": 35,
+        $gte: 35,
       },
     },
     {
       price: {
-        "$lt": 90,
+        $lt: 90,
       },
     },
   ],

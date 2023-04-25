@@ -208,15 +208,15 @@ const query: SearchQuery<Catalog> = {
   q: "running",
   searchFields: ["name", "labels"],
   filter: {
-    "$and": [
+    $and: [
       {
         price: {
-          "$gte": 40,
+          $gte: 40,
         },
       },
       {
         price: {
-          "$lte": 90,
+          $lte: 90,
         },
       },
     ],
@@ -228,6 +228,7 @@ const query: SearchQuery<Catalog> = {
 
 The following filter operators are supported:
 
+- `$eq` - Matches documents where the field value is equal to the provided value.
 - `$lt` - Matches documents where the field value is less than the provided value.
 - `$lte` - Matches documents where the field value is less than or equal to the provided value.
 - `$gt` - Matches documents where the field value is greater than the provided value.
@@ -248,15 +249,15 @@ const query: SearchQuery<Catalog> = {
   q: "running",
   searchFields: ["name", "labels"],
   filter: {
-    "$and": [
+    $and: [
       {
         price: {
-         "$gte": 40,
+          $gte: 40,
         },
       },
       {
         price: {
-          "$lt": 90,
+          $lt: 90,
         },
       },
     ],
